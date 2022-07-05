@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1{text-align: center}
+h3{color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;}
+
+#lottery_draw
+{
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+#lottery_draw td, #lottery_draw th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+#lottery_draw tr:nth-child(even){background-color: #f2f2f2;}
+#lottery_draw tr:hover {background-color: #ddd;}
+#lottery_draw th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #0491aa;
+  color: white;
+}
+img {
+  border-radius: 8px;
+  height: 180px;
+  width: 250px;
+}
+
+button {
+  background-color: #0491aa; 
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  padding: 12px 28px;
+}
+
+</style>
+</head>
+
+<body>
+    <h1>Lottery-Ballot</h1>
+    
+    <hr>
+    <br>
+    <br>
+    <br>
+    <table id="lottery_draw">
+        <tr>
+            <th>Car</th>
+            <th>Phone</th>
+            <th>Laptop</th>
+        </tr>
+        <tr>
+            <td><img src="Car_draw.jpg" alt="Car" ><h2 class="bidAmmount" style="text-align:right"></h2></td>
+            <td><img src="phone_draw.jpg" alt="Phone" > <h2 class="bidAmmount" style="text-align:right"></h2></td>
+            <td><img src="laptop_draw.jpg" alt="Laptop" > <h2 class="bidAmmount" style="text-align:right"></h2></td>
+        </tr>
+
+        <tr>
+            <td><button class="bidButton">Bid</button></td>
+            <td><button class="bidButton">Bid</button></td>
+            <td><button class="bidButton">Bid</button></td>
+            
+        </tr>
+
+        <tr>
+            <td><h3>Current Account</h3></td>
+            <td><h3>Owner's Account</h3></td>
+        </tr>
+        <tr>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+        </tr>
+        <tr>
+            <td><button id="revealButton">Reveal</button></td>
+            <td><button id="withdrawButton">Withdraw</button></td>
+        </tr>
+        <tr>
+            <td><button id="amIWinnerButton">Am I Winner</button></td>
+            <td><button id="declareButton">Declare Winner</button></td>
+        </tr>
+
+    </table>
+
+    <br>
+    <br>
+    <br>
+    <hr>
+    <h3 id="Balance" style="text-align:center">Contract Balance:</h3>
+    
+    <script src="web3.min.js"></script>
+    <script src="App.js"></script>
+
+</body>
+</html>
